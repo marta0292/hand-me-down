@@ -1,3 +1,39 @@
-.home-about-us {
+@import "../../settings/colors";
 
+.home-about-us {
+  margin-top: 4.2%;
+  height: 58.4rem;
+  display: flex;
+  justify-content: space-between;
+
+  .home-about-us-content {
+    width: 50.4%;
+    background-color: $azure;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //&:last-child {
+    //  display: flex;
+    //  align-items: flex-end;
+    //}
+    .about-us-title {
+      padding-bottom: 2.7%;
+      font-size: 2.4rem;
+      line-height: 3.4rem;
+    }
+    .about-us-text {
+      padding: 5.7% 15.6% 0;
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 3.4rem;
+      color: $dark;
+    }
+  }
+  .home-about-us-picture {
+    width: 49.6%;
+    background-image: url("../../../assets/People.jpg");
+    background-size: cover;
+    background-position: center;
+  }
 }
