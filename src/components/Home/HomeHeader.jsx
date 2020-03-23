@@ -2,6 +2,7 @@ import React from "react";
 import "../../scss/components/home/_homeHeader.scss"
 import Decoration from '../../assets/Decoration.svg'
 import {Link} from "react-router-dom";
+import { Link as ScrollLink } from 'react-scroll'
 
 const HomeHeader = () => {
     return (
@@ -18,10 +19,10 @@ const HomeHeader = () => {
                     <nav className="home-header-menu-nav">
                         <ul className="home-header-menu-nav-list">
                             <li><a href="/">Start</a></li>
-                            <li><a href="/">O co chodzi?</a></li>
-                            <li><a href="/">O nas</a></li>
-                            <li><a href="/">Fundacja i organizacje</a></li>
-                            <li><a href="/">Kontakt</a></li>
+                            <li><ScrollLink to="steps" smooth={true}>O co chodzi?</ScrollLink></li>
+                            <li><ScrollLink to="about" smooth={true}>O nas</ScrollLink></li>
+                            <li><ScrollLink to="who" smooth={true}>Fundacja i organizacje</ScrollLink></li>
+                            <li><ScrollLink to="contact" smooth={true}>Kontakt</ScrollLink></li>
                         </ul>
                     </nav>
                 </div>

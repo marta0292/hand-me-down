@@ -3,7 +3,7 @@ import "../../scss/components/home/_homeAboutUs.scss"
 
 const HomeAboutUs = () => {
     return (
-        <div className='home-about-us'>
+        <div id="about" className='home-about-us'>
             AboutUs
         </div>
     );

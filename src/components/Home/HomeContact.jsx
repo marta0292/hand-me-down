@@ -3,7 +3,7 @@ import "../../scss/components/home/_homeContact.scss"
 
 const HomeContact = () => {
     return (
-        <div className='home-contact'>
+        <div id="contact" className='home-contact'>
             Contact
         </div>
     );
