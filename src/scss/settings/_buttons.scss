@@ -1,0 +1,20 @@
+@import "colors";
+
+$home-border-dark: 0.75px solid $dark;
+
+@mixin home-btn {
+  border: $home-border-dark;
+  background: none;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  font-size: 2.25rem;
+  line-height: 2.8rem;
+  text-decoration: none;
+  text-align: center;
+  color: $dark;
+  width: 19.4rem;
+  height: 7.5rem;
+}

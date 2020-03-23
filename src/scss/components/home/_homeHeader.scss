@@ -1,3 +1,84 @@
-.home-header {
+@import "../../settings/colors";
+@import "../../settings/buttons";
 
+.home-header {
+  height: 60.25rem;
+  margin-right: 7.5%;
+  display: flex;
+  .home-header-picture {
+    background-image: url("../../../assets/Home-Hero-Image.jpg");
+    background-size: cover;
+    background-position: right center;
+    width: 46.5%;
+  }
+  .home-header-info {
+    width: 53.5%;
+    display: flex;
+    flex-direction: column;
+    .home-header-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-top: 2%;
+      .home-header-menu-log {
+        padding-bottom: 1.8rem;
+        padding-right: 0.6rem;
+        .home-header-menu-log-list {
+          list-style: none;
+          display: flex;
+          a {
+            text-decoration: none;
+            color: $cool-grey;
+            font-size: 0.9rem;
+            padding: 0.6rem;
+            &:hover {
+              border: 0.75px solid $light-yellow;
+            }
+          }
+        }
+      }
+      .home-header-menu-nav {
+        .home-header-menu-nav-list {
+          list-style: none;
+          display: flex;
+          a {
+            text-decoration: none;
+            color: $dark;
+            font-size: 1.1rem;
+            padding: 0.6rem 1.25rem;
+            &:hover {
+              border: $home-border-dark;
+            }
+          }
+        }
+      }
+    }
+    .home-header-content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 23% 14% 28.6% 7%;
+      p {
+        font-size: 2.4rem;
+        line-height: 3.4rem;
+        letter-spacing: -0.76px;
+        color: $dark;
+        text-align: center;
+        padding-bottom: 3.4%;
+      }
+      .home-header-buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 4rem;
+        width: 100%;
+        .home-header-btn {
+          @include home-btn;
+          &:first-of-type {
+            margin-right: 4.6%;
+          }
+        }
+      }
+    }
+  }
 }
