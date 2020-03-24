@@ -13,10 +13,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    //&:last-child {
-    //  display: flex;
-    //  align-items: flex-end;
-    //}
     .about-us-title {
       padding-bottom: 2.7%;
       font-size: 2.4rem;
@@ -28,6 +24,12 @@
       font-size: 1.5rem;
       line-height: 3.4rem;
       color: $dark;
+    }
+    .about-us-signature {
+      width: 68.8%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
     }
   }
   .home-about-us-picture {
