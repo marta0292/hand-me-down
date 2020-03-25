@@ -1,3 +1,109 @@
-.home-contact {
+@import "../../settings/colors";
+@import "../../settings/buttons";
+@import "../../settings/fonts";
 
+.home-contact {
+  height: 64rem;
+  background-image: url("../../../assets/Background-Contact-Form.jpg");
+  background-position: left;
+  background-size: cover;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .home-contact-content {
+    width: 30%;
+    right: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10.5% 7% 0 0;
+    p {
+      font-size: 2.4rem;
+      line-height: 3.4rem;
+      letter-spacing: -0.76px;
+      color: $dark;
+      text-align: center;
+      padding-bottom: 1.6rem;
+    }
+    .home-contact-form {
+      width: 100%;
+      .home-contact-form-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        label {
+          width: 50%;
+          &:first-of-type {
+            padding-right: 1rem;
+          }
+        }
+      }
+      input, textarea {
+        border: none;
+        border-bottom: 1px solid $very-dark-grey;
+        background: none;
+        width: 100%;
+        &::placeholder {
+          font-size: 1.1rem;
+          color: $placeholder-color;
+          font-family: $font-base;
+        }
+      }
+      label {
+        color: $dark;
+        font-weight: 600;
+        line-height: 5.3rem;
+        display: flex;
+        flex-direction: column;
+      }
+      textarea {
+        width: 100%;
+        height: 6rem;
+        line-height: 1.5rem;
+      }
+      .home-contact-form-btn {
+        display: flex;
+        justify-content: flex-end;
+      }
+      button {
+        margin-top: 2.5rem;
+        padding: 0.8rem 3.25rem;
+        border: 0.75px solid $very-dark-grey;
+        background: none;
+        font-size: 1.1rem;
+        font-weight: 300;
+      }
+    }
+  }
+  .home-contact-footer {
+    color: $dark;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    p {
+      flex-grow: 9;
+      text-align: center;
+      padding-left: 12%;
+    }
+    .social-media {
+      flex-grow: 1;
+      img {
+        padding: 1.25rem;
+        &:last-of-type {
+          padding: 1.25rem 0;
+        }
+      }
+    }
+  }
 }
