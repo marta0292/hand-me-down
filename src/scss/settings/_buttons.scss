@@ -1,4 +1,5 @@
 @import "colors";
+@import "fonts";
 
 $home-border-dark: 0.75px solid $dark;
 
@@ -17,4 +18,15 @@ $home-border-dark: 0.75px solid $dark;
   color: $dark;
   width: 19.4rem;
   height: 7.5rem;
+}
+
+@mixin login-btn {
+  border: $home-border-dark;
+  background: none;
+  font-weight: 300;
+  font-size: 1.1rem;
+  font-family: $font-base;
+  text-decoration: none;
+  color: $dark;
+  padding: 0.8rem 1rem;
 }
