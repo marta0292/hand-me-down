@@ -36,6 +36,9 @@
     }
     .home-contact-form {
       width: 100%;
+      .send-message {
+        color: green;
+      }
       .home-contact-form-info {
         display: flex;
         flex-direction: row;
@@ -64,12 +67,18 @@
         line-height: 5.3rem;
         display: flex;
         flex-direction: column;
+        .error {
+          color: red;
+          font-size: 0.8rem;
+          line-height: 1.5rem;
+        }
       }
       textarea {
         width: 100%;
         height: 6rem;
         line-height: 1.5rem;
       }
+      
       .home-contact-form-btn {
         display: flex;
         justify-content: flex-end;
