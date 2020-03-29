@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "../../scss/components/home/_homeContact.scss"
-import Facebook from "../../assets/Facebook.svg";
-import Instagram from "../../assets/Instagram.svg";
-import Decoration from "../../assets/Decoration.svg";
+import "../scss/components/_contact.scss"
+import Facebook from "../assets/Facebook.svg";
+import Instagram from "../assets/Instagram.svg";
+import Decoration from "../assets/Decoration.svg";
 
 const initialState = {
     name: "",
@@ -12,7 +12,7 @@ const initialState = {
     emailError: "",
     messageError: "",
 }
-class HomeContact extends Component {
+class Contact extends Component {
     state = initialState;
 
     handleChange = (e) => {
@@ -41,7 +41,7 @@ class HomeContact extends Component {
         let emailError = "";
         let messageError = "";
 
-        if (this.state.name.includes(' ') && this.state.name.length > 0) {
+        if (this.state.name.includes(' ') & this.state.name.length > 0) {
             nameError = 'Podane imię jest nieprawidłowe!'
         }
         if (!this.state.email.includes('@')) {
@@ -134,4 +134,4 @@ class HomeContact extends Component {
     }
 };
 
-export default HomeContact;
+export default Contact;

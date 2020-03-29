@@ -1,3 +1,84 @@
-.home-who-we-help {
+@import "../../settings/_colors";
+@import "../../settings/_buttons";
+@import "../../settings/_fonts";
 
+.home-who-we-help {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4.4rem;
+    p {
+        font-size: 2.4rem;
+        line-height: 3.4rem;
+        letter-spacing: -0.76px;
+        color: $dark;
+        text-align: center;
+        padding-bottom: 1.6rem;
+      }
+    .who-we-help-options {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 3rem;
+        width: 50%;
+        button {
+            text-decoration: none;
+            border: none;
+            background-color: white;
+            color: $dark;
+            font-size: 1.5rem;
+            font-family: $font-base;
+            line-height: 1.5rem;
+            padding: 0.6rem 1.25rem;
+            &:hover {
+            border: $home-border-dark;
+          }
+        }
+    }
+    .who-we-help-description {
+      width: 40%;
+      text-align: center;
+      font-size: 1.4rem;
+      line-height: 1.9rem;
+      color: $dark;
+      padding: 3.75rem 0;
+    }
+    .who-we-help-list {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 14%;
+      .who-we-help-box {
+        border-bottom: $home-border-dark;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.9rem 0;
+        &:last-child {
+          border: none;
+        }
+        .who-we-help-box-title {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          h3 {
+            font-weight: 300;
+            font-size: 1.6rem;
+            color: $dark;
+          }
+          p {
+            font-weight: 300;
+            font-size: 1.1rem;
+            line-height: 1.4rem;
+            padding: 0.4rem 0 0 0;
+          }
+        }
+        p {
+          font-weight: 300;
+          font-size: 1.1rem;
+          padding: 0;
+        }
+      }
+    }
 }
