@@ -36,7 +36,7 @@
     }
     .home-contact-form {
       width: 100%;
-      .send-message {
+      .success {
         color: green;
       }
       .home-contact-form-info {
@@ -61,13 +61,16 @@
           font-family: $font-base;
         }
       }
+      .error {
+        border-color: red;
+      }
       label {
         color: $dark;
         font-weight: 600;
         line-height: 5.3rem;
         display: flex;
         flex-direction: column;
-        .error {
+        .errors {
           color: red;
           font-size: 0.8rem;
           line-height: 1.5rem;
