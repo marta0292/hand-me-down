@@ -1,0 +1,112 @@
+{
+  "whoWeHelp": [
+    {
+      "type": "Fundacja",
+      "title": "Dbam o Zdrowie",
+      "goal": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+      "description": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+    },
+    {
+      "type": "Fundacja",
+      "title": "Dla dzieci",
+      "goal": "Pomoc dzieciom z ubogich rodzin.",
+      "description": "ubrania, meble, zabawki"
+    },
+    {
+      "type": "Fundacja",
+      "title": "Bez domu",
+      "goal": "Pomoc dla osób nie posiadających miejsca zamieszkania.",
+      "description": "ubrania, jedzenie, ciepłe koce"
+    },
+    {
+      "type": "Fundacja",
+      "title": "Dbam o Zdrowie2",
+      "goal": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+      "description": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+    },
+    {
+      "type": "Fundacja",
+      "title": "Dla dzieci2",
+      "goal": "Pomoc dzieciom z ubogich rodzin.",
+      "description": "ubrania, meble, zabawki"
+    },
+    {
+      "type": "Fundacja",
+      "title": "Bez domu2",
+      "goal": "Pomoc dla osób nie posiadających miejsca zamieszkania.",
+      "description": "ubrania, jedzenie, ciepłe koce"
+    },
+    {
+      "type": "Fundacja",
+      "title": "Dbam o Zdrowie3",
+      "goal": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+      "description": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+    },
+    {
+      "type": "Fundacja",
+      "title": "Dla dzieci3",
+      "goal": "Pomoc dzieciom z ubogich rodzin.",
+      "description": "ubrania, meble, zabawki"
+    },
+    {
+      "type": "Fundacja",
+      "title": "Bez domu3",
+      "goal": "Pomoc dla osób nie posiadających miejsca zamieszkania.",
+      "description": "ubrania, jedzenie, ciepłe koce"
+    },
+    {
+      "type": "Organizacja",
+      "title": "Lorem Ipsum 1",
+      "goal": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+      "description": "Egestas, sed, tempus"
+    },
+    {
+      "type": "Organizacja",
+      "title": "Lorem Ipsum 2",
+      "goal": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+      "description": "Ut, aliquam, purus, sit, amet"
+    },
+    {
+      "type": "Organizacja",
+      "title": "Lorem Ipsum 3",
+      "goal": "Scelerisque in dictum non consectetur a erat nam.",
+      "description": "Mi, quis, hendrerit, dolor"
+    },
+    {
+      "type": "Organizacja",
+      "title": "Lorem Ipsum 4",
+      "goal": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+      "description": "Egestas, sed, tempus"
+    },
+    {
+      "type": "Organizacja",
+      "title": "Lorem Ipsum 5",
+      "goal": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+      "description": "Ut, aliquam, purus, sit, amet"
+    },
+    {
+      "type": "Organizacja",
+      "title": "Lorem Ipsum 6",
+      "goal": "Scelerisque in dictum non consectetur a erat nam.",
+      "description": "Mi, quis, hendrerit, dolor"
+    },
+    {
+      "type": "Zbiórka",
+      "title": "Lorem Ipsum 1",
+      "goal": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+      "description": "Egestas, sed, tempus"
+    },
+    {
+      "type": "Zbiórka",
+      "title": "Lorem Ipsum 2",
+      "goal": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+      "description": "Ut, aliquam, purus, sit, amet"
+    },
+    {
+      "type": "Zbiórka",
+      "title": "Lorem Ipsum 3",
+      "goal": "Scelerisque in dictum non consectetur a erat nam.",
+      "description": "Mi, quis, hendrerit, dolor"
+    }
+  ]
+}
