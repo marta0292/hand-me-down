@@ -80,5 +80,20 @@
           padding: 0;
         }
       }
+      .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 3em;
+        li {
+          align-items: center;
+          font-size: 1.1rem;
+          color: $dark;
+          padding: 1rem;
+          &:hover {
+            border: 1px solid $very-dark-grey;
+          }
+        }
+      }
     }
 }

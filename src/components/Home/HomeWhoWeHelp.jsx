@@ -3,9 +3,16 @@ import "../../scss/components/home/_homeWhoWeHelp.scss"
 import Decoration from '../../assets/Decoration.svg';
 
 class HomeWhoWeHelp extends Component {
-    state = {
-        whoWeHelp: []
+    constructor() {
+        super();
+        this.state = {
+            whoWeHelp: [],
+            currentPage: 1,
+            itemsPerPage: 3
     };
+    this.handleClick = this.handleClick.bind(this);
+    }
+    
 
     componentDidMount() {
         fetch('http://localhost:3001/whoWeHelp')
@@ -19,8 +26,49 @@ class HomeWhoWeHelp extends Component {
             })
     };
 
+    handleClick(event) {
+        this.setState({
+          currentPage: Number(event.target.id)
+        });
+      }
+
     render() {
-       const { whoWeHelp } = this.state;
+        const { whoWeHelp, currentPage, itemsPerPage } = this.state;
+
+        const indexOfLastItem = currentPage * itemsPerPage;
+        const indexOfFirstItem = indexOfLastItem -itemsPerPage;
+        const currentItems = whoWeHelp.slice(indexOfFirstItem, indexOfLastItem);
+
+        const renderItems = currentItems.map((whoWeHelp, index) => {
+        return (
+            <li 
+            key={index}
+            className='who-we-help-box'>
+            <div className='who-we-help-box-title'>
+                <h3>{whoWeHelp.type} "{whoWeHelp.title}"</h3>
+                <p>Cel i misja: {whoWeHelp.goal}</p>
+            </div>
+            <p>{whoWeHelp.description}</p>
+        </li>
+        )});
+
+        // Logic for displaying page numbers
+        const pageNumbers = [];
+        for (let i = 1; i <= Math.ceil(whoWeHelp.length / itemsPerPage); i++) {
+          pageNumbers.push(i);
+        }
+
+        const renderPageNumbers = pageNumbers.map(number => {
+          return (
+            <li
+              key={number}
+              id={number}
+              onClick={this.handleClick}
+            >
+              {number}
+            </li>
+          );
+        });
 
         return (
             <div id='who' className='home-who-we-help'>
@@ -36,17 +84,10 @@ class HomeWhoWeHelp extends Component {
                 </div>
                 <div className='who-we-help-list'>
                     <ul>
-                        {whoWeHelp.map(whoWeHelp => {
-                            return (
-                                <li className='who-we-help-box'>
-                                    <div className='who-we-help-box-title'>
-                                        <h3>{whoWeHelp.type} "{whoWeHelp.title}"</h3>
-                                        <p>Cel i misja: {whoWeHelp.goal}</p>
-                                    </div>
-                                    <p>{whoWeHelp.description}</p>
-                                </li>
-                            )
-                        })}
+                        {renderItems}
+                    </ul>
+                    <ul id="page-numbers" className='pagination'>
+                        {renderPageNumbers}
                     </ul>
                 </div>
             </div>
