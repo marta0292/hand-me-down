@@ -14,8 +14,8 @@ const HomeHeader = () => {
                     <p>Zacznij pomagać! <br/> Oddaj niechciane rzeczy w zaufane ręce</p>
                     <img src={Decoration} alt='decoration'/>
                     <div className='home-header-buttons'>
-                        <Link className='home-header-btn' to="/Login">oddaj<br/>rzeczy</Link>
-                        <Link className='home-header-btn' to="/Login">zorganizuj<br/>zbiórkę</Link>
+                        <Link className='home-header-btn' to="/logowanie">oddaj<br/>rzeczy</Link>
+                        <Link className='home-header-btn' to="/logowanie">zorganizuj<br/>zbiórkę</Link>
                     </div>
                 </div>
             </div>

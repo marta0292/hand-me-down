@@ -52,7 +52,7 @@ const HomeSimpleSteps = () => {
                     <p className='simple-step-text'>kurier przyjedzie w dogodnym terminie</p>
                 </div>
             </div>
-            <Link className='home-simple-steps-btn' to="/Login">oddaj<br/>rzeczy</Link>
+            <Link className='home-simple-steps-btn' to="/logowanie">oddaj<br/>rzeczy</Link>
         </div>
     );
 };
