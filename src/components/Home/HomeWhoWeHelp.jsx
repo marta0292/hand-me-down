@@ -6,7 +6,9 @@ class HomeWhoWeHelp extends Component {
     constructor() {
         super();
         this.state = {
-            whoWeHelp: [],
+            name: '',
+            description: '',
+            items: [],
             currentPage: 1,
             itemsPerPage: 3
     };
@@ -15,15 +17,31 @@ class HomeWhoWeHelp extends Component {
     
 
     componentDidMount() {
-        fetch('http://localhost:3001/whoWeHelp')
+        fetch('http://localhost:3001/whoWeHelp/1')
             .then((response) => {
                 return response.json();
             })
             .then((whoWeHelp) => {
                 this.setState({
-                    whoWeHelp,
+                    description: whoWeHelp.desc,
+                    items: whoWeHelp.items,
+                    name: whoWeHelp.name
                 })
             })
+    };
+
+    handleGetData = (e) => {
+        const pathId = e.target.id;
+        fetch(`http://localhost:3001/whoWeHelp/${pathId}`, {
+        }).then(resp => {
+            return resp.json();
+        }).then((whoWeHelp) => {
+            this.setState({
+                description: whoWeHelp.desc,
+                items: whoWeHelp.items,
+                name: whoWeHelp.name
+            })
+        }) 
     };
 
     handleClick(event) {
@@ -33,28 +51,29 @@ class HomeWhoWeHelp extends Component {
       }
 
     render() {
-        const { whoWeHelp, currentPage, itemsPerPage } = this.state;
+        const { description, items, name, currentPage, itemsPerPage } = this.state;
 
         const indexOfLastItem = currentPage * itemsPerPage;
         const indexOfFirstItem = indexOfLastItem -itemsPerPage;
-        const currentItems = whoWeHelp.slice(indexOfFirstItem, indexOfLastItem);
-
-        const renderItems = currentItems.map((whoWeHelp, index) => {
-        return (
-            <li 
-            key={index}
-            className='who-we-help-box'>
-            <div className='who-we-help-box-title'>
-                <h3>{whoWeHelp.type} "{whoWeHelp.title}"</h3>
-                <p>Cel i misja: {whoWeHelp.goal}</p>
-            </div>
-            <p>{whoWeHelp.description}</p>
-        </li>
-        )});
+        const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
+        
+        const renderItems = currentItems.map((item, index) => {
+            return (
+                <li 
+                key={index}
+                className='who-we-help-box'>
+                <div className='who-we-help-box-title'>
+                    <h3>{name} "{item.title}"</h3>
+                    <p>Cel i misja: {item.goal}</p>
+                </div>
+                <p>{item.description}</p>
+            </li>
+            )
+        });
 
         // Logic for displaying page numbers
         const pageNumbers = [];
-        for (let i = 1; i <= Math.ceil(whoWeHelp.length / itemsPerPage); i++) {
+        for (let i = 1; i <= Math.ceil(items.length / itemsPerPage); i++) {
           pageNumbers.push(i);
         }
 
@@ -75,12 +94,12 @@ class HomeWhoWeHelp extends Component {
                 <p className='who-we-help-title'>Komu pomagamy?</p>
                 <img src={Decoration} alt='decoration'/>
                 <div className='who-we-help-options'>
-                    <button>Fundacjom</button>
-                    <button>Organizacjom<br />pozarządowym</button>
-                    <button>Lokalnym<br />zbiórkom</button>
+                    <button id='1' onClick={this.handleGetData}>Fundacjom</button>
+                    <button id='2' onClick={this.handleGetData}>Organizacjom<br />pozarządowym</button>
+                    <button id='3' onClick={this.handleGetData}>Lokalnym<br />zbiórkom</button>
                 </div>
                 <div className='who-we-help-description'>
-                    W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.
+                    {description}
                 </div>
                 <div className='who-we-help-list'>
                     <ul>
